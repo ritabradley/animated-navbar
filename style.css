@@ -32,3 +32,46 @@ main {
     margin-left: 5rem;
     padding: 1rem;
 }
+
+.navbar {
+    background: var(--bg-primary);
+    height: 100vh;
+    position: fixed;
+    width: 5rem;
+}
+
+.navbar-nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    align-items: center;
+    color: var(--text-primary);
+    display: flex;
+    height: 5rem;
+    text-decoration: none;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
