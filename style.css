@@ -36,14 +36,9 @@ main {
 
 .navbar {
     position: fixed;
-    height: 100vh;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
     overflow: scroll;
-}
-
-.navbar:hover {
-    width: 16rem;
 }
 
 .navbar:hover .link-text {
@@ -85,11 +80,11 @@ main {
 }
 
 .fa-primary {
-    color: #7eff8d;
+    color: #ffe77e;
 }
 
 .fa-secondary {
-    color: #49df62;
+    color: #dfc449;
 }
 
 .fa-primary,
@@ -130,4 +125,45 @@ main {
 
 .navbar:hover .logo svg {
     transform: rotate(-540deg);
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin: 0;
+        padding-bottom: 5rem;
+    }
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+        transition: opacity var(--transition-speed);
+    }
 }
